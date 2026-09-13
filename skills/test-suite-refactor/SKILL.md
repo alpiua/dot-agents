@@ -100,6 +100,12 @@ Do not invent a second schema-disposal pattern.
 Delete or collapse these even when they are green. They are not unique
 dimensions.
 
+Do not retain or add an absence or reintroduction test for abandoned,
+unshipped, review-only, or agent-generated intermediate code. Retain that kind
+of guard only when a current public API, security, migration, or operational
+contract requires the surface to remain absent; otherwise delete the stale test
+or fixture rather than preserving its history.
+
 | Smell | Action |
 | --- | --- |
 | Two tests, same observable, different mock/fixture spelling | Keep the stronger seam; `REMOVE` the other |

@@ -1,3 +1,8 @@
+---
+name: planner
+description: Use for portfolio plans, roadmaps, active-plan state, cross-repository dependencies, and MemPalace indexing of plans or documentation.
+---
+
 # Planner
 
 Use for portfolio plans, roadmaps, active-plan state, cross-repository

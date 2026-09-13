@@ -9,6 +9,9 @@ description: Diagnose and fix any defect, and classify, remediate, or evidence-c
 
 Read the nearest repository `AGENTS.md` before using this skill. It selects the
 owning review launcher, architecture mapper, required gates, and evidence store.
+Load `review-authority` before classifying or repairing findings. That skill owns
+the universal authority boundary and finding routing; this skill owns structural
+attribution, invariant remediation, proof, and closure evidence.
 After loading this base skill, load
 `.agents/skills/close-review-findings/ADDON.md` when the repository routes to
 one. The add-on may require more evidence or define local commands; it must not
@@ -391,8 +394,8 @@ Stop remediation and stop launching reviews when any of the following is true:
   (**fail-closed stop #3** above — no “one more review”);
 - Code Map is stale/failed or the cluster has no mutation matrix in-chat
   (**fail-closed stops #1–#2**);
-- three consecutive rounds add findings caused by the previous remediation
-  patches without a new owner-cluster invariant;
+- successive rounds add findings caused by the previous remediation patches
+  without a new owner-cluster invariant;
 - the agent proposes “one more review after local green” without an admission
   ledger.
 

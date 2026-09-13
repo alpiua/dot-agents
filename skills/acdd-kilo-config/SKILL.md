@@ -1,9 +1,9 @@
 ---
-name: acdd-config
-description: Inspect and explicitly change ACDD Kilo gate-to-agent/model bindings.
+name: acdd-kilo-config
+description: Inspect and explicitly change Kilo ACDD gate-to-agent/model bindings.
 ---
 
-# ACDD Configuration
+# Kilo ACDD Configuration
 
 Use this skill only after `/acdd settings` shows the effective configuration or
 the operator explicitly requests an ACDD role/model change.

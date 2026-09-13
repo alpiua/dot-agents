@@ -24,6 +24,13 @@ role separation, block unless the admitted Contract and repository adapter
 explicitly mark separation optional and authorize a degraded mode. That mode
 still requires independent review of the complete test diff.
 
+Late executable authoring is deliberate when an early test could freeze a
+defective implementation-shaped oracle. Before Build, independently review and
+freeze the observable outcome, failure semantics, required production seam and
+evidence level, and one sensitivity mutation. The later test author derives
+expected behavior only from that frozen authority; current implementation may
+locate the seam but must not define the oracle.
+
 ## Admission
 
 Start only when all inputs are present:
@@ -73,9 +80,14 @@ suite or reconstruct historical evidence.
   clients, or stores; mock/helper-only proof cannot satisfy that contract. Place
   fakes only behind unavailable external boundaries.
 - Keep tests deterministic and scoped to the declared scenario. Do not rewrite
-  unrelated suites to improve a metric or a style preference.
+unrelated suites to improve a metric or a style preference.
+- Do not author an absence or reintroduction test for abandoned, unshipped,
+  review-only, or agent-generated intermediate code. Such a guard is valid
+  only when a current public API, security, migration, or operational contract
+  requires the surface to remain absent; otherwise delete the stale test or
+  fixture instead of preserving its history.
 - Write only tests, test fixtures, and the host-owned evidence map. Production,
-  contract, adapter, and migration edits return to the owning delivery role.
+contract, adapter, and migration edits return to the owning delivery role.
 - Name at least one plausible contract-breaking mutation per scenario and prove
   that the final test detects it by controlled mutation, pre-fix replay, fault
   injection, or an equivalent deliberate break.
@@ -112,9 +124,8 @@ mock above the claimed boundary blocks completion.
 ## Host Boundary
 
 The host provides sessions, role separation, filesystem isolation, test
-execution, evidence storage, and any write permissions. Kilo may use child
-sessions, diffs, structured messages, and dynamic permissions; those runtime
-details do not belong in this shared skill.
+execution, evidence storage, and any write permissions. Host runtime mechanics
+do not belong in this shared skill.
 
 ## Output
 

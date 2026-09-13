@@ -8,13 +8,15 @@ the owning repository's `.agents/` and `.acdd/` directories.
 
 | Skill | Purpose |
 |---|---|
-| `acdd-flow` | Runs authority-driven delivery gates: design, contract, build, review, and handoff. |
-| `acdd-config` | Inspects or explicitly changes ACDD Kilo role-to-agent/model bindings. |
+| `acdd-flow` | Routes planned delivery to contract planning, delivery orchestration, review authority, and handoff. |
+| `acdd-kilo-config` | Inspects or explicitly changes Kilo ACDD role-to-agent/model bindings. |
 | `agent-instructions` | Creates and maintains `AGENTS.md`, local skill add-ons, and workflow guidance. |
 | `close-review-findings` | Diagnoses defects and remediates or evidence-closes review findings. |
 | `code-research` | Researches open-source repositories to understand implementation patterns. |
 | `codebase-memory` | Uses the codebase knowledge graph for structural search, tracing, and impact analysis. |
 | `commit-workflow` | Prepares intentional, reviewable Git commits after explicit authorization. |
+| `django-gridviewspec` | Architecture standards, lifecycle invariants, Islands Architecture (GridViewSpec + HTMX + Alpine), and MCP tooling for Django UI. |
+| `documentation-edits` | Writes docs, skills, AGENTS.md, and comments as short present-tense instructions. |
 | `explore` | Searches a codebase for a targeted question. |
 | `feature-research` | Researches existing architecture before implementing a complex feature. |
 | `find-skills` | Finds or installs a skill for a requested capability. |

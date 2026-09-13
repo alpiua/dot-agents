@@ -11,7 +11,7 @@ description: Create or revise AGENTS.md, agent workflows, and SKILL.md instructi
 ~/.agents/skills/<name>/SKILL.md                reusable base procedure
 <repository>/AGENTS.md                          router, commands, and guards
 <repository>/.agents/skills/<name>/ADDON.md     optional repository add-on
-<repository>/.acdd/<host>.yaml                 ACDD repository adapter
+<repository>/.acdd/**                          repository-specific ACDD state and adapter
 <repository>/**/AGENTS.md                       subtree-specific commands and invariants
 <repository>/.agents/{skills,workflows}         repository-owned procedures and adapters
 <repository>/docs/**                            contracts, architecture, and operational detail
@@ -36,9 +36,8 @@ locations, and stricter gates. It must not weaken the shared skill's safety,
 authorization, or evidence requirements. Do not depend on an enclosing workspace
 `AGENTS.md`: agents start from an individual Git repository.
 
-`acdd-flow` is the exception to add-on routing: load repository policy from the
-host-selected adapter under `.acdd/` (`.acdd/kilo.yaml` for Kilo). Do not create
-`.agents/skills/acdd-flow/ADDON.md`.
+`acdd-flow` is an entry router. Do not create an `.agents/skills/acdd-flow/ADDON.md`;
+put repository procedure in the receiving skill's add-on.
 
 ## Write
 

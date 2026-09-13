@@ -1,0 +1,4 @@
+interface:
+  display_name: Review Authority
+  short_description: Bound reviewer findings, repairs, and authority escalation.
+  default_prompt: Apply review-authority to classify and route findings without expanding current authority.
